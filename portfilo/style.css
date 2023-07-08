@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: lightpink;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+nav ul li a:hover {
+    background-color: #25b79f;
+    color: bisque;
+}
+
+.right {
+    font-size: 2rem;
+}
+
+.first {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    align-items: center;
+    background-image: url(cube.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.first>div {
+    width: 30%;
+}
+
+.l-section img {
+    width: 100%;
+
+
+}
+
+.r-section {
+    margin-top: 3cm;
+    margin-left: 3cm;
+    font-size: 3rem;
+    color: #eff5f8;
+
+}
+
+.r-section a {
+    text-decoration: none;
+    background-color: brown;
+    border-radius: 32px;
+    color: white;
+    padding: 6px;
+    margin-top: 2cm;
+}
+
+.name {
+    color: rgb(116, 7, 219);
+    width: 110%;
+
+}
+
+.about-me {
+    background-color: black;
+    justify-content: space-around;
+    position: relative;
+
+
+}
+
+.about-me .about-heading {
+    color: #25b79f;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.about-content img {
+    height: 200px;
+    width: 150px;
+    margin-top: 3cm;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.about-content .left-content {
+
+    display: flex;
+
+}
+
+.about-content .left-content p {
+    text-align: right;
+
+    margin-top: 2cm;
+    padding: 120px;
+    font-size: 1.2rem;
+    color: #f0f0e6;
+}
+
+.about-content .right-content {
+    flex-basis: 100%;
+}
+
+.left-content h1 {
+    margin-top: 3.2rem;
+    text-align: center;
+}
+
+.right-content h1 {
+    margin-top: 3.2rem;
+    text-align: center;
+}
+
+.skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://media.giphy.com/media/CGZGV8wix4lvJn3dxy/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.skills-bar {
+    padding: 25px 30px;
+}
+
+.skills-bar .bar {
+    margin: 25px 0;
+}
+
+.skills-bar .bar .info span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.skills-bar .bar .info {
+    margin-bottom: 8px;
+    color: #f0f0e6;
+}
+
+.skills-bar .bar .progress-line {
+    position: relative;
+    height: 10px;
+    width: 550px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line span {
+    position: absolute;
+    background: #25b79f;
+    height: 100%;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.progress-line .html {
+    width: 80%;
+}
+
+.progress-line .css {
+    width: 70%;
+}
+
+.progress-line .bootstrap {
+    width: 50%;
+}
+
+.progress-line .javascript {
+    width: 50%;
+}
+
+.progress-line .c {
+    width: 50%;
+}
+
+.bar .progress-line span::before {
+    position: absolute;
+    content: "";
+    height: 0;
+    right: 0;
+    top: -12px;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-style: #f0f0f0;
+    border-top-color: #f0f0f0;
+}
+
+.bar .progress-line span::after {
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: #07374a;
+    font-size: 12px;
+    font-weight: 700;
+    background: #f0f0f0;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.progress-line .c::after {
+    content: "80%";
+}
+
+.progress-line .html::after {
+    content: "75%";
+}
+
+.progress-line .css::after {
+    content: "70%";
+}
+
+.progress-line .javascript::after {
+    content: "50%";
+}
+
+.contact {
+    background: white;
+    position: relative;
+    margin-top: 3cm;
+}
+
+.contact-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgb(8, 52, 52);
+}
+
+.contact-content h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: whitesmoke;
+    padding-bottom: 0.5rem;
+}
+
+.contact-content .mail {
+    color: #f0f0e6;
+    padding-bottom: 0.2rem;
+    font-size: 1rem;
+}
+
+.contact-content .links {
+    color: white;
+    padding: 0.5rem;
+    padding-bottom: 1.8rem;
+    font-size: 1rem;
+}
+
+.contact-content a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-content a:hover {
+    color: #25b79f;
+}
